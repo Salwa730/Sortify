@@ -126,7 +126,7 @@ nav ul a:hover{background:rgba(255,255,255,.4)}
 @keyframes glow3{0%,65%{border-color:transparent;box-shadow:none}69%,97%{border-color:var(--olive);box-shadow:0 10px 24px rgba(39,40,34,.12)}100%{border-color:transparent}}
 .anim *{transform-box:fill-box;transform-origin:center}
 .how.in .card{animation:card 6s ease-in-out infinite}
-@keyframes card{0%{transform:translate(-40px,20px) rotate(-10deg)}14%,26%{transform:translate(0,0) rotate(0)}33%,100%{transform:translate(-40px,20px) rotate(-10deg)}}
+@keyframes card{0%{transform:translate(-30px,14px) rotate(-8deg)}14%,26%{transform:translate(0,0) rotate(0)}33%,100%{transform:translate(-30px,14px) rotate(-8deg)}}
 .how.in .wave{animation:wave 6s infinite}.how.in .wave.w2{animation-name:wave2}
 @keyframes wave{0%,13%{opacity:0}16%,27%{opacity:1}30%,100%{opacity:0}}
 @keyframes wave2{0%,17%{opacity:0}20%,27%{opacity:1}30%,100%{opacity:0}}
@@ -135,7 +135,7 @@ nav ul a:hover{background:rgba(255,255,255,.4)}
 .how.in .bottle{animation:drop 6s ease-in infinite}
 @keyframes drop{0%,34%{transform:translateY(-70px);opacity:0}37%{transform:translateY(-70px);opacity:1}47%{transform:translateY(38px);opacity:1}50%,100%{transform:translateY(38px);opacity:0}}
 .how.in .ride{animation:ride 6s linear infinite}
-@keyframes ride{0%,49%{transform:translateX(0);opacity:0}51%{opacity:1;transform:translateX(0)}61%{transform:translateX(70px);opacity:1}64%,100%{transform:translateX(70px);opacity:0}}
+@keyframes ride{0%,49%{transform:translateX(0);opacity:0}51%{opacity:1;transform:translateX(0)}61%{transform:translateX(104px);opacity:1}64%,100%{transform:translateX(104px);opacity:0}}
 .how.in .binhit{animation:binhit 6s infinite}
 @keyframes binhit{0%,60%{fill:#EFD9D6}62%,66%{fill:#E3C5C1}70%,100%{fill:#EFD9D6}}
 .how.in .plus{animation:plus 6s ease-out infinite}
@@ -226,7 +226,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <p id="goal-text">To make recycling on campus easy and rewarding, so recyclables get sorted correctly, bins get emptied before they overflow, and janitors no longer have to sort waste by hand.</p>
       </div>
     </div>
-    <div class="scene" aria-label="Illustration of the Sortify bin: a conveyor belt carries items to metal, plastic and paper bins">
+    <div class="scene" aria-label="Illustration of the Sortify bin: a conveyor belt carries items to metal, paper and plastic bins">
       <svg viewBox="0 0 400 360" role="img">
         <!-- bin body -->
         <rect x="40" y="40" width="320" height="290" rx="6" fill="#B89B7A"/>
@@ -249,13 +249,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <rect x="68" y="196" width="80" height="108" rx="4" fill="#A2B4A7"/>
           <rect x="68" y="226" width="80" height="78" rx="4" fill="#8FA294"/>
           <text x="108" y="218">Metal</text>
-          <rect x="160" y="196" width="80" height="108" rx="4" fill="#EFD9D6"/>
-          <rect x="160" y="248" width="80" height="56" rx="4" fill="#E3C5C1"/>
-          <text x="200" y="224">Plastic</text>
-          <rect x="252" y="196" width="80" height="108" rx="4" fill="#FFFFFF"/>
-          <rect x="252" y="270" width="80" height="34" rx="4" fill="#D9D8CE"/>
-          <text x="292" y="224">Paper</text>
+          <rect x="160" y="196" width="80" height="108" rx="4" fill="#FFFFFF"/>
+          <rect x="160" y="270" width="80" height="34" rx="4" fill="#D9D8CE"/>
+          <text x="200" y="224">Paper</text>
+          <rect x="252" y="196" width="80" height="108" rx="4" fill="#EFD9D6"/>
+          <rect x="252" y="248" width="80" height="56" rx="4" fill="#E3C5C1"/>
+          <text x="292" y="224">Plastic</text>
         </g>
+        <!-- card reader -->
+        <rect x="224" y="14" width="48" height="40" rx="4" fill="#272822"/>
+        <rect x="230" y="20" width="36" height="14" rx="2" fill="#A2B4A7"/>
+        <circle cx="248" cy="44" r="5" fill="#EFD9D6"/>
         <!-- QR code sticker -->
         <rect x="282" y="12" width="44" height="44" rx="4" fill="#FFFFFF" stroke="#272822" stroke-width="2"/>
         <g fill="#272822"><rect x="288" y="18" width="12" height="12"/><rect x="308" y="18" width="12" height="12"/><rect x="288" y="38" width="12" height="12"/><rect x="309" y="39" width="4" height="4"/><rect x="316" y="44" width="4" height="4"/><rect x="309" y="46" width="4" height="4"/><rect x="302" y="31" width="4" height="4"/></g>
@@ -266,23 +270,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="band how" id="how">
   <div class="wrap">
-    <h2>Scan, drop, earn</h2>
+    <h2>Tap/Scan, drop, earn</h2>
     <p class="sub">Sortify takes the guesswork out of recycling. You don't have to work out which bin is right, because the bin sorts every item for you.</p>
     <div class="flow">
       <div class="stepbox s1">
         <div class="art"><svg class="anim" viewBox="0 0 240 180" aria-hidden="true">
-          <rect x="140" y="40" width="74" height="74" rx="6" fill="#FFFFFF" stroke="#272822" stroke-width="3"/>
-          <g fill="#272822"><rect x="150" y="50" width="20" height="20"/><rect x="184" y="50" width="20" height="20"/><rect x="150" y="84" width="20" height="20"/><rect x="184" y="86" width="7" height="7"/><rect x="196" y="96" width="7" height="7"/><rect x="184" y="98" width="7" height="7"/><rect x="174" y="74" width="7" height="7"/></g>
-          <text x="177" y="134" text-anchor="middle" font-family="Jost,sans-serif" font-size="11" font-weight="600" fill="#272822">On the bin</text>
-          <path class="wave" d="M124 66c8 8 8 24 0 32" fill="none" stroke="#272822" stroke-width="4" stroke-linecap="round"/>
-          <path class="wave w2" d="M112 56c14 14 14 40 0 52" fill="none" stroke="#272822" stroke-width="4" stroke-linecap="round"/>
-          <g class="card"><rect x="52" y="36" width="52" height="96" rx="9" fill="#272822"/>
-            <rect x="57" y="46" width="42" height="72" rx="4" fill="#EFD9D6"/>
-            <rect x="63" y="88" width="30" height="9" rx="2" fill="#FFFFFF"/>
-            <path class="ok" d="M68 66l7 7 13-14" fill="none" stroke="#272822" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <rect x="128" y="34" width="64" height="92" rx="8" fill="#272822"/>
+          <rect x="137" y="45" width="46" height="28" rx="3" fill="#A2B4A7"/>
+          <path class="ok" d="M149 59l7 7 13-14" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="160" cy="100" r="11" fill="#EFD9D6"/>
+          <text x="160" y="142" text-anchor="middle" font-family="Jost,sans-serif" font-size="10" font-weight="600" fill="#272822">Card reader</text>
+          <g transform="translate(200 52)">
+            <rect width="32" height="32" rx="3" fill="#FFFFFF" stroke="#272822" stroke-width="2"/>
+            <g fill="#272822"><rect x="4" y="4" width="9" height="9"/><rect x="19" y="4" width="9" height="9"/><rect x="4" y="19" width="9" height="9"/><rect x="19" y="20" width="4" height="4"/><rect x="24" y="24" width="4" height="4"/></g>
+          </g>
+          <text x="216" y="100" text-anchor="middle" font-family="Jost,sans-serif" font-size="10" font-weight="600" fill="#272822">or scan</text>
+          <path class="wave" d="M116 64c7 7 7 21 0 28" fill="none" stroke="#272822" stroke-width="4" stroke-linecap="round"/>
+          <path class="wave w2" d="M105 55c12 12 12 36 0 46" fill="none" stroke="#272822" stroke-width="4" stroke-linecap="round"/>
+          <g class="card"><rect x="22" y="56" width="78" height="50" rx="6" fill="#FFFFFF" stroke="#272822" stroke-width="3"/>
+            <circle cx="40" cy="78" r="9" fill="#A2B4A7"/>
+            <rect x="54" y="70" width="36" height="6" rx="3" fill="#E3C5C1"/><rect x="54" y="82" width="28" height="6" rx="3" fill="#A2B4A7"/>
+            <text x="61" y="100" text-anchor="middle" font-family="Jost,sans-serif" font-size="8" font-weight="600" fill="#272822">RIT ID</text></g>
         </svg></div>
-        <div class="hd"><span class="n">1</span><h3>Scan</h3></div>
-        <p>Scan the QR code on the bin with your phone camera, type in your university ID and press Start recycling. Press Done recycling when you finish.</p>
+        <div class="hd"><span class="n">1</span><h3>Tap/Scan</h3></div>
+        <p>Tap your university ID on the card reader at the front of the bin. Or scan the QR code with your phone, type in your university ID and press Start recycling.</p>
       </div>
       <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <div class="stepbox s2">
@@ -293,12 +304,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <rect x="50" y="100" width="140" height="10" rx="5" fill="#272822"/>
           <g class="ride"><rect x="64" y="88" width="12" height="12" rx="3" fill="#EFD9D6" stroke="#272822" stroke-width="2"/></g>
           <rect x="54" y="124" width="40" height="38" rx="3" fill="#A2B4A7"/>
-          <rect class="binhit" x="100" y="124" width="40" height="38" rx="3" fill="#EFD9D6"/>
-          <rect x="146" y="124" width="40" height="38" rx="3" fill="#FFFFFF"/>
-          <g font-family="Jost,sans-serif" font-size="10" font-weight="600" text-anchor="middle" fill="#272822"><text x="74" y="147">Metal</text><text x="120" y="147">Plastic</text><text x="166" y="147">Paper</text></g>
+          <rect x="100" y="124" width="40" height="38" rx="3" fill="#FFFFFF"/>
+          <rect class="binhit" x="146" y="124" width="40" height="38" rx="3" fill="#EFD9D6"/>
+          <g font-family="Jost,sans-serif" font-size="10" font-weight="600" text-anchor="middle" fill="#272822"><text x="74" y="147">Metal</text><text x="120" y="147">Paper</text><text x="166" y="147">Plastic</text></g>
         </svg></div>
         <div class="hd"><span class="n">2</span><h3>Drop</h3></div>
-        <p>Drop one item in the top. The conveyor carries it and a pusher sends it to the metal, plastic or paper bin.</p>
+        <p>Drop one item in the top. The conveyor carries it and a pusher sends it to the metal, paper or plastic bin.</p>
       </div>
       <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <div class="stepbox s3">
@@ -376,7 +387,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <footer>
   <div class="wrap">
     <span>Sortify, Smart Waste Recycling Station, RIT Dubai</span>
-    <span>Metal · Plastic · Paper</span>
+    <span>Metal · Paper · Plastic</span>
   </div>
 </footer>
 
@@ -394,8 +405,8 @@ const students = [
 ];
 const bins = [ // fill level in percent, alert at 80
   {name:"Metal",   fill:83},
-  {name:"Plastic", fill:52},
-  {name:"Paper",   fill:31}
+  {name:"Paper",   fill:31},
+  {name:"Plastic", fill:52}
 ];
 /* ========================================================================== */
 
@@ -512,7 +523,7 @@ $('signin').addEventListener('submit',e=>{
   if(!showCard($('card-id').value))return;
   startSession();
   if(calm){$('session').scrollIntoView();return}
-  $('how').scrollIntoView({behavior:'smooth'});          // 1. show Scan, drop, earn
+  $('how').scrollIntoView({behavior:'smooth'});          // 1. show Tap/Scan, drop, earn
   clearTimeout(window._tour);
   window._tour=setTimeout(()=>$('session').scrollIntoView({behavior:'smooth'}),4000); // 2. then the Pretend button and points
 });
